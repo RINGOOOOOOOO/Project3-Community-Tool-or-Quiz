@@ -1,0 +1,64 @@
+@font-face {
+  font-family: smalle;
+  src: url("asset/MadeofScars-Regular.ttf");
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: smalle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 30%;
+  border-radius: 20px;
+  position: relative;
+  /* box-shadow: 0 4px 6px #c4b197, 0 1px 3px #795c41; */
+  border: 1.5px solid #c4b197;
+  margin: 9.5% auto;
+  padding-bottom: 1rem;
+  color: #564436;
+}
+
+.input {
+  border: 1.5px solid #c4b197;
+  border-radius: 5px;
+  padding: 1px;
+  transition: border-color 0.3s ease;
+}
+
+h1 {
+  margin-top: 15%;
+  font-size: 1.7rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 4%;
+  margin-top: 10%;
+}
+
+.next-page {
+  display: none;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 15%;
+}
+
+.fieldset {
+  border: 1.5px solid #c4b197;
+  border-radius: 10px;
+  margin-bottom: 10%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: font-size 0.3s ease;
+}
+
+a:hover {
+  font-size: 105%;
+}
