@@ -3,8 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextPageLink = document.getElementById("nextPage");
   const radios = document.querySelectorAll(".radio");
 
-  const defaultColor = "#564436";
-
   nameInput.addEventListener("input", function () {
     const val = this.value.trim();
     nextPageLink.style.display = val ? "block" : "none";
@@ -18,4 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem("color", this.value);
     });
   }
+
+  const goToNextButton = document.getElementById("go-to-next");
+
+  goToNextButton.addEventListener("click", function () {
+    window.location.href = "page02.html";
+  });
 });
