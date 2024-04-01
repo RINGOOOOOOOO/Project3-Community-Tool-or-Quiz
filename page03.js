@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector("#jiangkang").innerHTML =
-    localStorage.getItem("jiangkang");
-  document.querySelector("#cuanxi").innerHTML = localStorage.getItem("cuanxi");
-  document.querySelector("#bianmi").innerHTML = localStorage.getItem("bianmi");
-  
+  // document.querySelector("#jiangkang").innerHTML =
+  //   localStorage.getItem("jiangkang");
+  // document.querySelector("#cuanxi").innerHTML = localStorage.getItem("cuanxi");
+  // document.querySelector("#bianmi").innerHTML = localStorage.getItem("bianmi");
+
   const submitButton = document.getElementById("submit");
   const options = document.querySelectorAll(".quiz-options li");
   let selectedOption = "";
