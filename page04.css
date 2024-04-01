@@ -1,0 +1,119 @@
+@font-face {
+  font-family: smalle;
+  src: url("asset/smalle.ttf");
+}
+
+:root {
+  --light-brown-color: #c4b197;
+  --light-color: #fff;
+  --dark-color: #564436;
+  --grey-color: #fff;
+  --transition: all 300ms ease-in-out;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: smalle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 4px 0 0 #c4b197;
+  border: 1.5px solid #c4b197;
+  margin: 5% auto;
+  padding-bottom: 1rem;
+  color: #564436;
+  letter-spacing: 1.5px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  max-width: 400px;
+  padding: 2% auto;
+}
+
+h3 {
+  font-size: 0.8rem;
+}
+
+h1 {
+  margin-top: 7%;
+  font-size: 1rem;
+  max-width: 400px;
+}
+
+.quiz-question {
+  font-size: 1rem;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+}
+
+.quiz-options {
+  list-style-type: none;
+  margin: 1rem 0;
+  padding-left: 0;
+}
+
+.quiz-options li {
+  margin-left: 0;
+  font-size: 0.8rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  margin: 0.8rem 0;
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+  border: 3px solid var(--light-brown-color);
+  background-color: var(--light-brown-color);
+  color: var(--light-color);
+  box-shadow: 0 4px 0 0 #c4b197;
+  transition: var(--transition);
+  max-width: 400px;
+}
+
+.quiz-options li:hover {
+  background-color: var(--grey-color);
+  color: var(--dark-color);
+  border-color: var(--grey-color);
+  box-shadow: 0 4px 0 0 #bbbbbb;
+}
+.quiz-options li:active {
+  transform: scale(0.97);
+}
+
+.selected {
+  background-color: var(--grey-color) !important;
+  color: var(--dark-color) !important;
+  border-color: var(--grey-color) !important;
+  box-shadow: 0 4px 0 0 #bbbbbb !important;
+}
+.quiz-foot button {
+  font-family: smalle;
+  border: none;
+  border-radius: 0.5rem;
+  outline: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin: 1rem auto 0.5rem auto;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: block;
+  background-color: var(--grey-color);
+  color: var(--dark-color);
+  letter-spacing: 1.5px;
+  transition: var(--transition);
+  box-shadow: 0 4px 0 0 #c4b197;
+}
+.quiz-foot button:hover {
+  background-color: #cdbda5;
+  box-shadow: 0 4px 0 0 #cdbda5;
+  color: white;
+}
+.quiz-foot button:active {
+  transform: scale(0.95);
+}
