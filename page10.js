@@ -6,16 +6,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const textId2 = document.getElementById("text2");
   const options = document.querySelectorAll(".quiz-options li");
 
-  let selectedOption = localStorage.getItem("selectedOption");
   let countA = parseInt(localStorage.getItem("countA")) || 0;
   let countB = parseInt(localStorage.getItem("countB")) || 0;
   let countC = parseInt(localStorage.getItem("countC")) || 0;
+  const Option05 = localStorage.getItem("Option05");
+  const Option06 = localStorage.getItem("Option06");
+  const Option07 = localStorage.getItem("Option07");
+  const Option08 = localStorage.getItem("Option08");
 
   function setResultText(option) {
-    if (option === "1. Like a jet fighter, anytime, anywhere") {
-      resultSpan.textContent = "OH no, you may have diarrhea troubles!";
-      result2Span.textContent =
-        "Under normal circumstances, having a bowel movement three times a day or once every three days are both considered reasonable ranges. As long as the bowel movements are regular, and the shape and color of the stool are healthy, there is no cause for concern!";
+    if (Option05 === "1. No") {
+      resultSpan.textContent = "test!";
+      // result2Span.textContent =
+      //   "Under normal circumstances, having a bowel movement three times a day or once every three days are both considered reasonable ranges. As long as the bowel movements are regular, and the shape and color of the stool are healthy, there is no cause for concern!";
     } else if (option === "2. At least twice a day") {
       resultSpan.textContent = "Wow, You have very healthy poop habits!";
       result2Span.textContent =
@@ -51,52 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     submitButton.style.display = "none";
   }
 
-  options.forEach((option) => {
-    option.addEventListener("click", function () {
-      options.forEach((opt) => opt.classList.remove("selected"));
-      this.classList.add("selected");
-
-      switch (selectedOption) {
-        case "A":
-          countA--;
-          break;
-        case "B":
-          countB--;
-          break;
-        case "C":
-          countC--;
-          break;
-        default:
-          break;
-      }
-
-      switch (this.id) {
-        case "A":
-          countA++;
-          break;
-        case "B":
-          countB++;
-          break;
-        case "C":
-          countC++;
-          break;
-        default:
-          break;
-      }
-
-      selectedOption = this.id;
-      console.log("A:", countA);
-      console.log("B:", countB);
-      console.log("C:", countC);
-      submitButton.style.display = "block";
-    });
-  });
-
   submitButton.addEventListener("click", function () {
-    localStorage.setItem("selectedOption", selectedOption);
-    localStorage.setItem("countA", countA);
-    localStorage.setItem("countB", countB);
-    localStorage.setItem("countC", countC);
-    window.location.href = "page05.html";
+    window.location.href = "index.html";
   });
 });
